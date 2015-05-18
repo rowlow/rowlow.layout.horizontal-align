@@ -1,0 +1,19 @@
+@import 'settings';
+@import 'mixins';
+@import 'functions';
+
+@each $breakpoint-name, $breakpoint-value in $rowlow-breakpoints {
+	@media (min-width: $breakpoint-value + px) {
+		.#{$rowlow-horizontal-align-namespace}horizontal-align--#{$breakpoint-name}--center{
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.#{$rowlow-horizontal-align-namespace}horizontal-align--#{$breakpoint-name}--right{
+			margin-left: auto;
+			margin-right: 0;
+		}
+		.#{$rowlow-horizontal-align-namespace}horizontal-align--#{$breakpoint-name}--left{
+			margin-left: 0;
+		}
+	}
+}
